@@ -68,10 +68,10 @@ const galleryLabels = [
 ];
 
 const ministryArms = [
-  { title: "Compassion Outreach", description: "Practical care for widows, orphanages and people in need.", number: "01" },
-  { title: "Market Evangelism", description: "The Gospel carried into everyday places and conversations.", number: "02" },
-  { title: "Schools & Youth", description: "A message of faith, identity and purpose for the next generation.", number: "03" },
-  { title: "Crusades & Missions", description: "Gathering communities around Christ and His life-transforming works.", number: "04" },
+  { title: "Compassion Outreach", description: "Practical care for widows, orphanages and people in need." },
+  { title: "Market Evangelism", description: "The Gospel carried into everyday places and conversations." },
+  { title: "Schools & Youth", description: "A message of faith, identity and purpose for the next generation." },
+  { title: "Crusades & Missions", description: "Gathering communities around Christ and His life-transforming works." },
 ];
 
 function scrollTo(id: string) {
@@ -169,7 +169,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="mandate" className="mandate-section journey-section" data-journey="01 · The mandate">
+        <section id="mandate" className="mandate-section journey-section" data-journey="The mandate">
           <div className="container mandate-grid">
             <div className="mandate-scripture" style={{ backgroundImage: `url(${assets.texture})` }}>
               <p className="eyebrow"><span />Our guiding scripture</p>
@@ -182,9 +182,9 @@ export default function Home() {
                 <p>We exist to bring the love of Christ into the places where compassion, hope and practical care are needed most.</p>
               </SectionIntro>
               <div className="belief-list">
-                <article><span className="belief-list__number">01</span><div><p>Vision</p><h3>Bringing joy and solace to humanity in all spheres of life.</h3></div></article>
-                <article><span className="belief-list__number">02</span><div><p>Mission</p><h3>To see Christ glorified through His works.</h3></div></article>
-                <article><span className="belief-list__number">03</span><div><p>Core values</p><h3>Christ-centred. Excellence &amp; Modesty. The Way, the Truth and the Life.</h3></div></article>
+                <article><div><p>Vision</p><h3>Bringing joy and solace to humanity in all spheres of life.</h3></div></article>
+                <article><div><p>Mission</p><h3>To see Christ glorified through His works.</h3></div></article>
+                <article><div><p>Core values</p><h3>Christ-centred. Excellence &amp; Modesty. The Way, the Truth and the Life.</h3></div></article>
               </div>
             </div>
           </div>
@@ -198,10 +198,10 @@ export default function Home() {
         </section>
 
         <section className="ministry-arms-section" aria-labelledby="ministry-arms-title">
-          <div className="container"><div className="ministry-arms-heading"><div><p className="eyebrow"><span />Get involved</p><h2 id="ministry-arms-title">Ministry Arms</h2></div><p>Different expressions of one calling: making Christ known through love in action.</p></div><div className="ministry-arms-grid">{ministryArms.map((arm) => <button className="ministry-arm-card" key={arm.title} onClick={() => scrollTo("involved")}><span>{arm.number}</span><h3>{arm.title}</h3><p>{arm.description}</p><ArrowUpRight size={21} /></button>)}</div></div>
+          <div className="container"><div className="ministry-arms-heading"><div><p className="eyebrow"><span />Get involved</p><h2 id="ministry-arms-title">Ministry Arms</h2></div><p>Different expressions of one calling: making Christ known through love in action.</p></div><div className="ministry-arms-grid">{ministryArms.map((arm) => <button className="ministry-arm-card" key={arm.title} onClick={() => scrollTo("involved")}><h3>{arm.title}</h3><p>{arm.description}</p><ArrowUpRight size={21} /></button>)}</div></div>
         </section>
 
-        <section id="about" className="story-section journey-section" data-journey="02 · Called to serve">
+        <section id="about" className="story-section journey-section" data-journey="Called to serve">
           <div className="story-line" aria-hidden="true"><span /></div>
           <div className="container story-layout">
             <div className="story-label"><p>Our Story</p><span>2024 — now</span></div>
@@ -215,13 +215,13 @@ export default function Home() {
             <div className="focus-card">
               <div className="focus-card__header"><HeartHandshake size={21} /><p>Who we reach</p></div>
               <div className="focus-list">
-                {outreachFocus.map(([label, copy], index) => <div key={label}><span>0{index + 1}</span><strong>{label}</strong><p>{copy}</p></div>)}
+                {outreachFocus.map(([label, copy]) => <div key={label}><strong>{label}</strong><p>{copy}</p></div>)}
               </div>
             </div>
           </div>
         </section>
 
-        <section id="founder" className="founder-section journey-section" data-journey="03 · The vision bearer">
+        <section id="founder" className="founder-section journey-section" data-journey="The vision bearer">
           <div className="container founder-layout">
             <div className="founder-image-block">
               <div className="founder-image-block__arch" />
@@ -239,7 +239,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="sermons" className="sermons-section journey-section" data-journey="04 · Hear the word">
+        <section id="sermons" className="sermons-section journey-section" data-journey="Hear the word">
           <div className="container">
             <div className="sermons-topline">
               <SectionIntro eyebrow="Hear the word" title="Recent Messages"><p>Scripture-rooted teaching for faith, purpose and a life that bears fruit.</p></SectionIntro>
@@ -258,7 +258,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="involved" className="involved-section journey-section" data-journey="05 · Walk with us">
+        <section id="involved" className="involved-section journey-section" data-journey="Walk with us">
           <div className="container involved-layout">
             <div className="involved-copy">
               <p className="eyebrow eyebrow--gold"><span />Get involved</p>
@@ -285,7 +285,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="prayer" className="prayer-section journey-section" data-journey="06 · Stand in prayer">
+        <section id="prayer" className="prayer-section journey-section" data-journey="Stand in prayer">
           <div className="container prayer-layout">
             <div><SectionIntro eyebrow="Prayer & testimony" title="We believe God still answers."><p>Bring your request in confidence, or share what God has done so that others may be encouraged.</p></SectionIntro><div className="prayer-note"><Sparkles size={18} /><p>Prayer requests submitted here are not treated as private and may be shared with the prayer team for agreement in prayer.</p></div></div>
             <div className="prayer-tabs">
@@ -295,14 +295,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="events" className="events-section journey-section" data-journey="07 · Gather in hope">
+        <section id="events" className="events-section journey-section" data-journey="Gather in hope">
           <div className="container events-layout">
             <div className="events-heading"><p className="eyebrow"><span />Crusades & outreaches</p><h2>Be there when the next outreach is announced.</h2><p>When a new crusade or outreach is confirmed, those on this list will hear first.</p></div>
             <div className="event-waitlist"><div className="event-waitlist__icon"><MapPinned size={23} /></div><p className="pastoral-kicker">Receive the call to gather</p><h3>Join the waitlist for our next event</h3><p>Be the first to know when our next crusade or outreach is announced.</p><MandateForm formName="Event Waitlist" submitLabel="Keep me informed" compact><Field label="Name"><input name="name" required placeholder="Your name" /></Field><Field label="Email"><input type="email" name="email" required placeholder="you@example.com" /></Field><Field label="WhatsApp number"><input type="tel" name="whatsapp" required placeholder="+234" /></Field></MandateForm></div>
           </div>
         </section>
 
-        <section id="gallery" className="gallery-section journey-section" data-journey="08 · A living archive">
+        <section id="gallery" className="gallery-section journey-section" data-journey="A living archive">
           <div className="container">
             <div className="gallery-header"><SectionIntro eyebrow="Outreach gallery" title="The work will speak for itself."><p>Actual outreach photographs will be added here as the ministry’s story continues to unfold.</p></SectionIntro><p className="gallery-header__note">Future photo archive</p></div>
             <div className="gallery-grid">
@@ -311,14 +311,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="donate" className="donate-section journey-section" data-journey="09 · Sow with joy">
+        <section id="donate" className="donate-section journey-section" data-journey="Sow with joy">
           <div className="container donate-layout">
             <div className="donate-copy"><p className="eyebrow eyebrow--gold"><span />Partner through giving</p><h2>Sow into <em>The Great Mandate.</em></h2><p>Your giving helps carry the Gospel and compassionate care to people, places and communities in need.</p><p className="giving-verse">“God loves a cheerful giver.” <span>2 Corinthians 9:7</span></p></div>
             <div className="bank-card"><p className="pastoral-kicker">A gift placed in faithful hands</p><div className="bank-card__head"><HandCoins size={22} /><p>Bank transfer details</p></div><div className="bank-data"><span>Bank</span><strong>FCMB</strong></div><div className="bank-data"><span>Account name</span><strong>The Great Mandate Outreach Ministries</strong></div><div className="bank-data bank-data--account"><span>Account number</span><strong>2006711996</strong><button onClick={copyAccountNumber} aria-label="Copy account number">{accountCopied ? <Check size={17} /> : <Copy size={17} />}{accountCopied ? "Copied" : "Copy"}</button></div><div className="gateway-placeholder"><span>Online giving</span><p>Payment gateway space reserved for Paystack or Flutterwave.</p></div></div>
           </div>
         </section>
 
-        <section id="contact" className="contact-section journey-section" data-journey="10 · Stay connected">
+        <section id="contact" className="contact-section journey-section" data-journey="Stay connected">
           <div className="container contact-layout">
             <div className="contact-copy"><p className="eyebrow"><span />Reach out</p><h2>Let us walk with you.</h2><p>For ministry enquiries, outreach partnerships or a conversation with the team, use the details below or send a message.</p><div className="contact-methods"><a href="mailto:solomonufuoma16@gmail.com"><Mail size={18} /><span><small>Email</small>solomonufuoma16@gmail.com</span></a><a href="tel:+2348106903151"><Phone size={18} /><span><small>Phone</small>+234 810 690 3151</span></a><a href="https://wa.me/2347050722808" target="_blank" rel="noreferrer"><MessageCircle size={18} /><span><small>WhatsApp</small>+234 705 072 2808</span></a></div></div>
             <div className="contact-form-wrap"><p className="pastoral-kicker">The team is ready to listen</p><p className="form-panel__title">Send a message</p><p className="form-panel__reassurance">Tell us how we may serve or stand with you.</p><MandateForm formName="Contact" submitLabel="Send a word to the team"><Field label="Your name"><input name="name" required placeholder="Your name" /></Field><Field label="Email address"><input type="email" name="email" required placeholder="you@example.com" /></Field><Field label="Message"><textarea name="message" rows={5} required placeholder="How may we serve you?" /></Field></MandateForm></div>

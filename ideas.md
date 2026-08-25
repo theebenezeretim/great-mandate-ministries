@@ -75,3 +75,4 @@ Use the supplied Great Mandate globe-and-cross logo as the primary identity. A s
 - Gallery placeholders are treated as an intentionally varied future archive, never as documentation of real outreaches until authentic ministry photography is supplied.
 - The home-page hierarchy now follows an SMHOS-inspired ministry rhythm: compact royal-blue header, welcoming hero, direct participation invitation, mandate, testimony gateway, ministry arms and practical contact pathways.
 - Poppins is the sole interface and display family, with bold tight-tracked hero and section statements reflecting the supplied reference while keeping Great Mandate’s own colour palette, assets and copy.
+- **Hope Teal — #18AAA8** is now the signature website accent, replacing every active gold and near-gold interface colour with a brighter, more contemporary signal of renewal, clarity and welcome. The supplied official logo remains unmodified as a ministry-owned identity asset.
