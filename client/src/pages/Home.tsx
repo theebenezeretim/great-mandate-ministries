@@ -78,6 +78,10 @@ function scrollTo(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+const routeMap: Record<string, string> = {
+  about: "/about", founder: "/founder", sermons: "/sermons", involved: "/partner", gallery: "/gallery", donate: "/give", contact: "/contact",
+};
+
 function SectionIntro({ eyebrow, title, children, light = false }: { eyebrow: string; title: string; children?: React.ReactNode; light?: boolean }) {
   return (
     <div className={`section-intro ${light ? "section-intro--light" : ""}`}>
@@ -102,6 +106,7 @@ export default function Home() {
 
   function handleNav(id: string) {
     setMenuOpen(false);
+    if (routeMap[id]) { window.location.assign(routeMap[id]); return; }
     scrollTo(id);
   }
 

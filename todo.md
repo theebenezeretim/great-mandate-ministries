@@ -29,3 +29,12 @@
 > Diagnosis: the Vercel deployment was READY but initially blocked by Vercel Authentication. After access was opened, the project served a raw `server/index.ts` file because the Vite build output was not explicitly configured for Vercel. A project-level `vercel.json` now directs Vercel to build with Vite and serve `dist/public`. The compiled site then exposed Manus-only asset paths, so the external deployment has been updated to use public repository asset URLs.
 
 > Verified outcome: the latest production deployment is READY and publicly renders the complete Great Mandate website, including the hero background, founder portrait and ministry logo.
+
+## Ministry Sub-Page Integration Tasks
+
+- [x] Define routes for About, Founder, Outreaches, Sermons, Events, Gallery, Prayer, Partner, Give and Contact.
+- [x] Create shared ministry navigation, footer and page-shell components.
+- [x] Build each dedicated ministry page with original Great Mandate content and focused calls to action.
+- [x] Apply the routed-page Sacred Journey editorial refinement and remove remaining ministry-arm numbering.
+- [x] Verify all routes locally; deployed Vercel verification follows the repository update.
+- [ ] Publish the route update and provide the public page links.
