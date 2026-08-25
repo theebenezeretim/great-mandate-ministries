@@ -26,4 +26,4 @@
 - [ ] Apply a safe source fix if the evidence identifies a repository-side configuration issue.
 - [ ] Confirm the exact recovery path and final accessible URL status.
 
-> Diagnosis: the Vercel deployment was READY but initially blocked by Vercel Authentication. After access was opened, the project served a raw `server/index.ts` file because the Vite build output was not explicitly configured for Vercel. A project-level `vercel.json` now directs Vercel to build with Vite and serve `dist/public`.
+> Diagnosis: the Vercel deployment was READY but initially blocked by Vercel Authentication. After access was opened, the project served a raw `server/index.ts` file because the Vite build output was not explicitly configured for Vercel. A project-level `vercel.json` now directs Vercel to build with Vite and serve `dist/public`. The compiled site then exposed Manus-only asset paths, so the external deployment has been updated to use public repository asset URLs.

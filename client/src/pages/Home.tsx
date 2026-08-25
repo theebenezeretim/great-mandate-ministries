@@ -30,12 +30,12 @@ import {
 import { useEffect, useState } from "react";
 
 const assets = {
-  logo: "/manus-storage/great-mandate-logo_ef79af06.jpg",
-  founder: "/manus-storage/pastor-solomon-ufuoma_d41093e2.jpg",
-  hero: "/manus-storage/mandate-hero-dawn_3a61f1ad.jpg",
-  texture: "/manus-storage/mandate-scripture-texture_6551f25f.jpg",
-  gallery: "/manus-storage/mandate-outreach-placeholder_6acecfce.jpg",
-  mark: "/manus-storage/mandate-mission-mark_6d1acfb1.png",
+  logo: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/great-mandate-logo.jpg",
+  founder: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/pastor-solomon-ufuoma.jpg",
+  hero: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/mandate-hero-dawn.jpg",
+  texture: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/mandate-scripture-texture.jpg",
+  gallery: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/mandate-outreach-placeholder.jpg",
+  mark: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/mandate-mission-mark.png",
 };
 
 const navItems = [
