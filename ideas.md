@@ -73,3 +73,5 @@ Use the supplied Great Mandate globe-and-cross logo as the primary identity. A s
 - Every major section after the hero carries a Sacred Journey signal through a Mandate Gold pathway rule and numbered marginal marker.
 - Forms lead with pastoral reassurance and an editorial framing device before presenting the practical fields.
 - Gallery placeholders are treated as an intentionally varied future archive, never as documentation of real outreaches until authentic ministry photography is supplied.
+- The home-page hierarchy now follows an SMHOS-inspired ministry rhythm: compact royal-blue header, welcoming hero, direct participation invitation, mandate, testimony gateway, ministry arms and practical contact pathways.
+- Poppins is the sole interface and display family, with bold tight-tracked hero and section statements reflecting the supplied reference while keeping Great Mandate’s own colour palette, assets and copy.

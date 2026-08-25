@@ -1,18 +1,18 @@
 /**
- * Sacred Journey Editorial design reminder:
- * Parchment warmth, midnight royal blue and Mandate Gold form a calm devotional
- * surface. Generous spacing, editorial typesetting and the golden path motif
- * should reinforce reverence, compassion and practical participation.
+ * SMHOS-inspired structural reminder:
+ * Use Poppins throughout, clear ministry-home section sequencing and bold,
+ * direct service invitations. Retain Great Mandate's royal-blue, cream and
+ * gold identity, supplied logo, founder portrait and outreach-first language.
  */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: "DM Sans", sans-serif;
-  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Poppins", sans-serif;
+  --font-serif: "Poppins", sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -36,7 +36,7 @@
 :root { --radius: 0.75rem; --background: #f7f0e4; --foreground: #17213f; --card: #fffdf9; --card-foreground: #17213f; --primary: #16284f; --primary-foreground: #fff9ef; --secondary: #eee1ca; --secondary-foreground: #17213f; --muted: #ece4d6; --muted-foreground: #657084; --accent: #c9a84c; --accent-foreground: #17213f; --border: #dfd2bd; --input: #e5d8c5; --ring: #c9a84c; }
 * { border-color: var(--border); }
 html { scroll-behavior: smooth; background: #f7f0e4; }
-body { margin: 0; color: var(--foreground); background: var(--background); font-family: "DM Sans", sans-serif; font-size: 16px; line-height: 1.65; }
+body { margin: 0; color: var(--foreground); background: var(--background); font-family: "Poppins", sans-serif; font-size: 16px; line-height: 1.65; }
 button, input, textarea { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 button:not(:disabled), a[href] { cursor: pointer; }
@@ -113,6 +113,16 @@ img { max-width: 100%; display: block; }
 @media (max-width: 470px){.container{width:min(100% - 30px, 600px)}.hero__actions{display:grid}.hero__actions .button{width:100%}.hero h1{font-size:3.45rem}.section-intro h2{font-size:2.8rem}.form-grid--two{grid-template-columns:1fr}.form-panel,.contact-form-wrap,.testimony-panel,.event-waitlist{padding:24px}.founder-copy h2{font-size:3.3rem}.story-copy h2,.involved-copy h2,.events-heading h2,.contact-copy h2{font-size:3.15rem}.donate-copy h2{font-size:3.65rem}.bank-data strong{font-size:23px}.gallery-grid{grid-auto-rows:93px}.gallery-tile--1,.gallery-tile--2,.gallery-tile--3,.gallery-tile--4,.gallery-tile--5,.gallery-tile--6{grid-column:span 12;grid-row:span 2}.gallery-tile--1,.gallery-tile--5{grid-row:span 3}.footer-main{padding-bottom:35px}.footer-brand img{width:78px;height:78px}}
 @media (prefers-reduced-motion: no-preference){.hero__copy,.hero__portrait-wrap{animation:rise .65s cubic-bezier(.23,1,.32,1) both}.hero__portrait-wrap{animation-delay:.13s}@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.hero__scroll svg{animation:none}.site-header,.button,.nav-partner,.sermon-card,.gallery-tile img,.text-link{transition:none}}
+
+/* SMHOS-inspired typography and one-page ministry structure. */
+.site-header{padding:11px 0;background:#17499c;color:#fff}.site-header::after{opacity:0}.site-header--scrolled{padding:10px 0;background:#103c83;color:#fff;box-shadow:0 5px 20px rgba(11,30,73,.26)}.brand img{width:46px;height:46px;padding:2px;border-color:rgba(255,255,255,.72);box-shadow:0 0 0 2px rgba(201,168,76,.76)}.brand__wordmark strong{font-size:11px;letter-spacing:.12em}.brand__wordmark small{font-size:7px;letter-spacing:.2em}.desktop-nav{gap:22px}.desktop-nav button{font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase}.desktop-nav button:hover{color:#f4d36e}.nav-partner{padding:10px 13px;color:#0f3473;background:#f2ca59;border-radius:1px;font-size:10px;letter-spacing:.07em;text-transform:uppercase}.nav-partner:hover{background:#fff0ad}
+h1,h2,h3,blockquote,.hero h1,.section-intro h2,.story-copy h2,.founder-copy h2,.sermon-card h3,.involved-copy h2,.events-heading h2,.donate-copy h2,.contact-copy h2,.bank-data strong,.footer-brand p{font-family:"Poppins",sans-serif}.hero h1{font-size:clamp(3.35rem,6.1vw,6.45rem);font-weight:800;letter-spacing:-.075em;line-height:.89}.hero h1 em{font-style:normal;color:#f4d36e;font-weight:700}.hero__lead{max-width:550px;font-size:15px;font-weight:400}.hero__scripture{font-family:"Poppins",sans-serif;font-size:12px;font-style:normal;font-weight:600;letter-spacing:.14em;text-transform:uppercase}.section-intro h2,.story-copy h2,.founder-copy h2,.involved-copy h2,.events-heading h2,.donate-copy h2,.contact-copy h2{font-weight:700;letter-spacing:-.06em}.belief-list h3,.mandate-scripture blockquote,.founder-image-block__quote,.sermon-card h3,.event-waitlist h3,.bank-data strong{font-family:"Poppins",sans-serif;font-weight:700}.mandate-scripture blockquote{font-size:clamp(1.55rem,2.4vw,2.15rem);letter-spacing:-.045em;line-height:1.18}.eyebrow{font-size:9px;letter-spacing:.23em}.button{border-radius:1px;font-family:"Poppins",sans-serif;font-size:10px;letter-spacing:.08em;text-transform:uppercase}.button--royal{color:#fff;background:#17499c}.button--royal:hover{background:#103c83}.button--outline-blue{color:#17499c;border:1px solid #17499c}.button--outline-blue:hover{color:#fff;background:#17499c}
+.online-invitation{padding:45px 0;background:#fff;color:#17213f}.online-invitation__layout{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.online-invitation h2{max-width:610px;margin:10px 0 0;font-size:clamp(1.8rem,3vw,2.7rem);font-weight:700;letter-spacing:-.06em;line-height:1.1}.online-invitation__actions{padding-left:30px;border-left:2px solid #c9a84c}.online-invitation__actions>p{margin:0 0 17px;color:#637086;font-size:13px}.online-invitation__actions>div{display:flex;gap:10px;flex-wrap:wrap}
+.testimony-showcase{padding:92px 0;background:#f5f7fd}.testimony-showcase__layout{display:grid;grid-template-columns:1.1fr .75fr;gap:80px;align-items:center}.testimony-showcase__title h2{max-width:650px;margin:10px 0 13px;font-size:clamp(2.5rem,4vw,4rem);font-weight:700;letter-spacing:-.07em;line-height:1}.testimony-showcase__title>p:not(.eyebrow){max-width:550px;margin:0;color:#657084;font-size:14px}.testimony-showcase__action{padding:34px 35px;border-left:5px solid #c9a84c;color:#fff;background:#17499c;box-shadow:0 16px 32px rgba(23,73,156,.17)}.testimony-showcase__action svg{color:#f4d36e}.testimony-showcase__action p{margin:17px 0;color:rgba(255,255,255,.85);font-size:14px}.testimony-showcase__action .button{color:#103c83;background:#fff}.testimony-showcase__action .button:hover{background:#fff0ad}
+.ministry-arms-section{padding:105px 0;background:#fff}.ministry-arms-heading{display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:38px}.ministry-arms-heading h2{margin:9px 0 0;font-size:clamp(2.8rem,4.4vw,4.45rem);font-weight:700;letter-spacing:-.075em;line-height:.9}.ministry-arms-heading>p{max-width:360px;margin:0 0 5px;color:#657084;font-size:13px}.ministry-arms-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.ministry-arm-card{position:relative;min-height:260px;padding:25px;text-align:left;color:#fff;background:#102b64;overflow:hidden;transition:transform 180ms ease,background 180ms ease}.ministry-arm-card:nth-child(2){background:#17499c}.ministry-arm-card:nth-child(3){background:#762f3b}.ministry-arm-card:nth-child(4){background:#1e5d76}.ministry-arm-card::before{content:"";position:absolute;right:-50px;bottom:-70px;width:180px;height:180px;border:1px solid rgba(255,255,255,.2);border-radius:50%}.ministry-arm-card:hover{transform:translateY(-5px);background:#0f3473}.ministry-arm-card>span{display:block;color:#f4d36e;font-size:10px;font-weight:700;letter-spacing:.18em}.ministry-arm-card h3{position:relative;margin:67px 0 8px;font-size:23px;font-weight:700;letter-spacing:-.055em;line-height:1.05}.ministry-arm-card p{position:relative;min-height:52px;margin:0;color:rgba(255,255,255,.77);font-size:12px;line-height:1.48}.ministry-arm-card>svg{position:absolute;right:21px;bottom:22px;color:#f4d36e}
+.journey-section::before{font-family:"Poppins",sans-serif}.form-panel__title,.bank-card__head p,.footer-links p{font-family:"Poppins",sans-serif}.pastoral-kicker,.giving-verse,.footer-invitation p,.testimony-empty,.founder-image-block__quote{font-family:"Poppins",sans-serif;font-style:normal}.sermon-card h3{font-size:clamp(1.7rem,2.4vw,2.25rem)}.founder-image-block__quote{font-size:17px;font-weight:600;line-height:1.3}.giving-verse{font-size:16px;font-weight:600}
+@media (max-width:800px){.site-header{padding:9px 0}.site-header--scrolled{padding:9px 0}.brand img{width:40px;height:40px}.online-invitation__layout,.testimony-showcase__layout{grid-template-columns:1fr;gap:26px}.online-invitation__actions{padding:22px 0 0;border-left:0;border-top:2px solid #c9a84c}.testimony-showcase__action{padding:27px}.ministry-arms-heading{display:block}.ministry-arms-heading>p{margin-top:14px}.ministry-arms-grid{grid-template-columns:1fr 1fr}.ministry-arm-card{min-height:230px}.ministry-arm-card h3{margin-top:52px}.online-invitation{padding:38px 0}.testimony-showcase{padding:76px 0}.ministry-arms-section{padding:82px 0}}
+@media (max-width:470px){.ministry-arms-grid{grid-template-columns:1fr}.ministry-arm-card{min-height:205px}.ministry-arm-card h3{margin-top:40px}.online-invitation__actions>div{display:grid}.online-invitation__actions .button{width:100%}}
 
 /* Sacred Journey refinements: recurring pilgrimage markers, pastoral invitations and an archival gallery system. */
 .brand img{width:56px;height:56px;padding:3px;border-color:rgba(201,168,76,.8);box-shadow:0 0 0 3px rgba(201,168,76,.16)}

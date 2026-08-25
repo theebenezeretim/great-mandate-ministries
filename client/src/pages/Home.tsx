@@ -1,7 +1,8 @@
 /**
- * Sacred Journey Editorial design reminder:
- * This page is a vertical pilgrimage—not a generic landing-page grid. Deep
- * royal blue, parchment and Mandate Gold guide a calm, scripture-led journey.
+ * SMHOS-inspired structure reminder:
+ * This page uses Poppins-led typography and a clear ministry-home rhythm:
+ * welcome hero, immediate invitation, mandate, testimony gateway and ministry
+ * arms. Great Mandate copy, assets and royal-blue/gold identity remain distinct.
  */
 import { MandateForm, Field } from "@/components/MandateForm";
 import {
@@ -64,6 +65,13 @@ const sermons = [
 
 const galleryLabels = [
   "Market Evangelism", "Prison Visits", "Orphanage Visits", "Widows Care", "School Outreach", "Crusades",
+];
+
+const ministryArms = [
+  { title: "Compassion Outreach", description: "Practical care for widows, orphanages and people in need.", number: "01" },
+  { title: "Market Evangelism", description: "The Gospel carried into everyday places and conversations.", number: "02" },
+  { title: "Schools & Youth", description: "A message of faith, identity and purpose for the next generation.", number: "03" },
+  { title: "Crusades & Missions", description: "Gathering communities around Christ and His life-transforming works.", number: "04" },
 ];
 
 function scrollTo(id: string) {
@@ -136,7 +144,7 @@ export default function Home() {
           <div className="hero__line" />
           <div className="hero__content container">
             <div className="hero__copy">
-              <p className="eyebrow eyebrow--hero"><span />A Christ-centred outreach ministry</p>
+              <p className="eyebrow eyebrow--hero"><span />Welcome to</p>
               <h1 id="hero-title">The Great Mandate <em>Outreach Ministries</em></h1>
               <p className="hero__lead">Advancing the Gospel of Christ. Bringing joy and solace to humanity in all spheres of life.</p>
               <p className="hero__scripture">James 1:27</p>
@@ -152,6 +160,13 @@ export default function Home() {
             </div>
           </div>
           <button className="hero__scroll" onClick={() => scrollTo("mandate")} aria-label="Discover the mandate"><span>Discover the mandate</span><ChevronDown size={18} /></button>
+        </section>
+
+        <section className="online-invitation" aria-label="Join the mission">
+          <div className="container online-invitation__layout">
+            <div><p className="eyebrow"><span />Walk with the mission</p><h2>Join us in carrying the Gospel into places where hope is needed.</h2></div>
+            <div className="online-invitation__actions"><p>Become part of the prayer, giving and service behind every outreach.</p><div><button className="button button--royal" onClick={() => scrollTo("involved")}>Partner with the Mission <ArrowRight size={17} /></button><button className="button button--outline-blue" onClick={() => scrollTo("events")}>See Outreach Updates <ArrowUpRight size={17} /></button></div></div>
+          </div>
         </section>
 
         <section id="mandate" className="mandate-section journey-section" data-journey="01 · The mandate">
@@ -173,6 +188,17 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+
+        <section className="testimony-showcase" aria-labelledby="testimony-showcase-title">
+          <div className="container testimony-showcase__layout">
+            <div className="testimony-showcase__title"><p className="eyebrow"><span />Testimonies</p><h2 id="testimony-showcase-title">What God is doing through the mandate.</h2><p>Verified testimonies from the ministry community will be shared here as they are received.</p></div>
+            <div className="testimony-showcase__action"><Quote size={31} /><p>Has God touched your life through a prayer, outreach or message?</p><button className="button button--royal" onClick={() => scrollTo("prayer")}>Share Your Testimony <ArrowRight size={17} /></button></div>
+          </div>
+        </section>
+
+        <section className="ministry-arms-section" aria-labelledby="ministry-arms-title">
+          <div className="container"><div className="ministry-arms-heading"><div><p className="eyebrow"><span />Get involved</p><h2 id="ministry-arms-title">Ministry Arms</h2></div><p>Different expressions of one calling: making Christ known through love in action.</p></div><div className="ministry-arms-grid">{ministryArms.map((arm) => <button className="ministry-arm-card" key={arm.title} onClick={() => scrollTo("involved")}><span>{arm.number}</span><h3>{arm.title}</h3><p>{arm.description}</p><ArrowUpRight size={21} /></button>)}</div></div>
         </section>
 
         <section id="about" className="story-section journey-section" data-journey="02 · Called to serve">
@@ -269,7 +295,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="events-section journey-section" data-journey="07 · Gather in hope">
+        <section id="events" className="events-section journey-section" data-journey="07 · Gather in hope">
           <div className="container events-layout">
             <div className="events-heading"><p className="eyebrow"><span />Crusades & outreaches</p><h2>Be there when the next outreach is announced.</h2><p>When a new crusade or outreach is confirmed, those on this list will hear first.</p></div>
             <div className="event-waitlist"><div className="event-waitlist__icon"><MapPinned size={23} /></div><p className="pastoral-kicker">Receive the call to gather</p><h3>Join the waitlist for our next event</h3><p>Be the first to know when our next crusade or outreach is announced.</p><MandateForm formName="Event Waitlist" submitLabel="Keep me informed" compact><Field label="Name"><input name="name" required placeholder="Your name" /></Field><Field label="Email"><input type="email" name="email" required placeholder="you@example.com" /></Field><Field label="WhatsApp number"><input type="tel" name="whatsapp" required placeholder="+234" /></Field></MandateForm></div>
