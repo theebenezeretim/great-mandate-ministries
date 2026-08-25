@@ -21,9 +21,11 @@
 
 ## Vercel Troubleshooting Tasks
 
-- [ ] Locate the linked Great Mandate Vercel project and latest deployment.
-- [ ] Inspect its build, deployment and runtime status.
-- [ ] Apply a safe source fix if the evidence identifies a repository-side configuration issue.
-- [ ] Confirm the exact recovery path and final accessible URL status.
+- [x] Locate the linked Great Mandate Vercel project and latest deployment.
+- [x] Inspect its build, deployment and runtime status.
+- [x] Apply a safe source fix if the evidence identifies a repository-side configuration issue.
+- [x] Confirm the exact recovery path and final accessible URL status.
 
 > Diagnosis: the Vercel deployment was READY but initially blocked by Vercel Authentication. After access was opened, the project served a raw `server/index.ts` file because the Vite build output was not explicitly configured for Vercel. A project-level `vercel.json` now directs Vercel to build with Vite and serve `dist/public`. The compiled site then exposed Manus-only asset paths, so the external deployment has been updated to use public repository asset URLs.
+
+> Verified outcome: the latest production deployment is READY and publicly renders the complete Great Mandate website, including the hero background, founder portrait and ministry logo.
