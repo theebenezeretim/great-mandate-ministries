@@ -143,7 +143,7 @@ export default function Home() {
       </header>
 
       <main>
-        <section className="hero" aria-labelledby="hero-title">
+        <section className="hero hero--sunrise" aria-labelledby="hero-title">
           <div className="hero__background" style={{ backgroundImage: `url(${assets.hero})` }} />
           <div className="hero__wash" />
           <div className="hero__line" />
@@ -157,11 +157,6 @@ export default function Home() {
                 <button className="button button--gold" onClick={() => scrollTo("involved")}>Partner With Us <ArrowRight size={17} /></button>
                 <button className="button button--ghost" onClick={() => scrollTo("prayer")}>Send a Prayer Request <ArrowUpRight size={17} /></button>
               </div>
-            </div>
-            <div className="hero__portrait-wrap">
-              <div className="hero__portrait-halo" />
-              <img className="hero__portrait" src={assets.founder} alt="Pastor Solomon Ufuoma, founder of The Great Mandate Outreach Ministries" />
-              <div className="hero__portrait-label"><span>Founded</span><strong>10.10.2024</strong></div>
             </div>
           </div>
           <button className="hero__scroll" onClick={() => scrollTo("mandate")} aria-label="Discover the mandate"><span>Discover the mandate</span><ChevronDown size={18} /></button>

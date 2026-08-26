@@ -36,5 +36,12 @@
 - [x] Create shared ministry navigation, footer and page-shell components.
 - [x] Build each dedicated ministry page with original Great Mandate content and focused calls to action.
 - [x] Apply the routed-page Sacred Journey editorial refinement and remove remaining ministry-arm numbering.
-- [x] Verify all routes locally; deployed Vercel verification follows the repository update.
-- [ ] Publish the route update and provide the public page links.
+- [x] Verify all routes locally and confirm dedicated About and Prayer routes directly on the live Vercel deployment.
+- [x] Publish the route update and provide the public page links.
+
+## Homepage Restoration Tasks
+
+- [x] Restore the sunrise-led primary homepage visual treatment.
+- [x] Remove the founder portrait and related desktop hero composition from the homepage.
+- [x] Keep the supplied portrait exclusive to the dedicated Founder page.
+- [x] Verify the corrected desktop and mobile homepage, then update Vercel.
