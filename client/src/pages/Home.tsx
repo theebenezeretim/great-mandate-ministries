@@ -35,6 +35,7 @@ const assets = {
   hero: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/mandate-hero-dawn.jpg",
   texture: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/mandate-scripture-texture.jpg",
   gallery: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/mandate-outreach-placeholder.jpg",
+  marketEvangelism: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/market-evangelism-2026.jpg",
   mark: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/mandate-mission-mark.png",
 };
 
@@ -306,7 +307,7 @@ export default function Home() {
           <div className="container">
             <div className="gallery-header"><SectionIntro eyebrow="Outreach gallery" title="The work will speak for itself."><p>Actual outreach photographs will be added here as the ministry’s story continues to unfold.</p></SectionIntro><p className="gallery-header__note">Future photo archive</p></div>
             <div className="gallery-grid">
-              {galleryLabels.map((label, index) => <article className={`gallery-tile gallery-tile--${index + 1}`} key={label}><div className={`gallery-art gallery-art--${index + 1}`}>{index === 0 ? <img src={assets.gallery} alt="Illustrative placeholder for an outreach gallery photograph" /> : null}<span className="gallery-art__seal">TGMO · Archive</span></div><div><span>Outreach photograph awaiting upload</span><strong>{label}</strong></div></article>)}
+              {galleryLabels.map((label, index) => <article className={`gallery-tile gallery-tile--${index + 1}`} key={label}><div className={`gallery-art gallery-art--${index + 1}`}>{index === 0 ? <img src={assets.marketEvangelism} alt="The Great Mandate Market Evangelism outreach" /> : null}<span className="gallery-art__seal">TGMO · Archive</span></div><div><span>{index === 0 ? "Authentic outreach photograph" : "Outreach photograph awaiting upload"}</span><strong>{label}</strong></div></article>)}
             </div>
           </div>
         </section>
