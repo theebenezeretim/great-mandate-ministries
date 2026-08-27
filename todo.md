@@ -50,4 +50,4 @@
 
 - [x] Upload the supplied Market Evangelism photograph to the public website asset path.
 - [x] Replace the Market Evangelism gallery placeholder with the authentic photograph.
-- [ ] Verify the Gallery and Outreaches pages, then update Vercel.
+- [x] Verify the Gallery and Outreaches pages, then update Vercel.
