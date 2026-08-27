@@ -45,3 +45,9 @@
 - [x] Remove the founder portrait and related desktop hero composition from the homepage.
 - [x] Keep the supplied portrait exclusive to the dedicated Founder page.
 - [x] Verify the corrected desktop and mobile homepage, then update Vercel.
+
+## Market Evangelism Photograph
+
+- [x] Upload the supplied Market Evangelism photograph to the public website asset path.
+- [x] Replace the Market Evangelism gallery placeholder with the authentic photograph.
+- [ ] Verify the Gallery and Outreaches pages, then update Vercel.
