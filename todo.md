@@ -46,6 +46,11 @@
 - [x] Keep the supplied portrait exclusive to the dedicated Founder page.
 - [x] Verify the corrected desktop and mobile homepage, then update Vercel.
 
+## Favicon Integration Tasks
+
+- [x] Use the existing Great Mandate logo as the favicon.
+- [x] Verify favicon metadata and the production build, then update Vercel.
+
 ## Market Evangelism Photograph
 
 - [x] Upload the supplied Market Evangelism photograph to the public website asset path.
@@ -56,3 +61,10 @@
 
 - [x] Replace the homepage Market Evangelism gallery placeholder with the authentic outreach photograph.
 - [x] Verify the featured homepage gallery crop and synchronise the update to Vercel.
+
+## Favicon Deployment Verification
+
+- [ ] Push the favicon metadata change to the GitHub repository linked to Vercel.
+- [ ] Confirm a new Vercel deployment reaches READY with the favicon commit.
+- [ ] Open the live site and verify the browser metadata/favicon uses the Great Mandate logo.
+
