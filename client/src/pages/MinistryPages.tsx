@@ -27,7 +27,11 @@ const arms = [
   ["Schools & Youth", "A message of faith, identity and purpose for the next generation."], ["Crusades & Missions", "Gathering communities around Christ and His life-transforming works."],
 ];
 
-const messages = ["Wonders of Sowing into Kingdom Advancement Endeavours", "Building Faith for Triumph in Hard Times"];
+const sermonLibraryUrl = "https://drive.google.com/drive/folders/1WaCH1Fa4zYt1rMyh223pfmOxmfeKUF8K";
+const messages = [
+  { title: "Wonders of Sowing into Kingdom Advancement Endeavours", href: "https://drive.google.com/file/d/1WlpeNHHjbj37OVms9cIxJB4xSl0zxHgE/view?usp=sharing" },
+  { title: "Building Faith for Triumph in Hard Times", href: "https://drive.google.com/file/d/1WmOiqv_UGqnqZ1vBah4f9bv_d6OrdTgz/view?usp=sharing" },
+];
 const archive = [
   { label: "Market Evangelism", src: marketEvangelismPhoto },
   { label: "Widows Care", src: widowsCarePhoto },
@@ -52,7 +56,7 @@ export function OutreachesPage() {
 }
 
 export function SermonsPage() {
-  return <MinistryLayout><PageHero eyebrow="Sermons" title={<>Hear the <em>Word.</em></>} lead="Scripture-rooted teaching for faith, purpose and a life that bears fruit."><PageCta href="/contact">Ask about a message</PageCta></PageHero><section className="route-section"><div className="container"><div className="route-archive-intro"><SectionHeading eyebrow="Teaching archive" title="Recent messages." copy="The full teaching library is being prepared. These messages are available to ask about through the ministry team." /><span><BookOpenText size={18} />More messages coming soon</span></div><div className="route-sermon-grid">{messages.map((message, index) => <article key={message}><span>Message 0{index + 1}</span><h3>{message}</h3><p>Message details and media links will be published here as they are released.</p><Link href="/contact">Ask about this message <ArrowRight size={16} /></Link></article>)}</div></div></section><section className="route-section route-section--mist"><div className="container route-two-column"><div><SectionHeading eyebrow="Stay informed" title="Receive new teaching notices." copy="Use the contact page to ask the team about a teaching, ministry event or future sermon release." /></div><PageCta href="/contact">Contact the team</PageCta></div></section></MinistryLayout>;
+  return <MinistryLayout><PageHero eyebrow="Sermons" title={<>Hear the <em>Word.</em></>} lead="Scripture-rooted teaching for faith, purpose and a life that bears fruit."><a className="button button--gold" href={sermonLibraryUrl} target="_blank" rel="noreferrer">Open sermon library<ArrowRight size={17} /></a></PageHero><section className="route-section"><div className="container"><div className="route-archive-intro"><SectionHeading eyebrow="Teaching archive" title="Recent messages." copy="Tap a message to listen via the ministry media library." /><a href={sermonLibraryUrl} target="_blank" rel="noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}><BookOpenText size={18} />Open full library</a></div><div className="route-sermon-grid">{messages.map((message, index) => <article key={message.title}><span>Message 0{index + 1}</span><h3>{message.title}</h3><p>Audio message — opens the media library in a new tab.</p><a href={message.href} target="_blank" rel="noreferrer" style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: 7, marginTop: 18, color: "#bdf5f0", textDecoration: "none", fontSize: 11, fontWeight: 700 }}>Listen to this message <ArrowRight size={16} /></a></article>)}</div></div></section><section className="route-section route-section--mist"><div className="container route-two-column"><div><SectionHeading eyebrow="Stay informed" title="Receive new teaching notices." copy="Use the contact page to ask the team about a teaching, ministry event or future sermon release." /></div><PageCta href="/contact">Contact the team</PageCta></div></section></MinistryLayout>;
 }
 
 export function EventsPage() {

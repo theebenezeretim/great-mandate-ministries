@@ -61,9 +61,11 @@ const outreachFocus = [
   ["Crusades", "Gathering hearts around Christ and His works."],
 ];
 
+const sermonLibraryUrl = "https://drive.google.com/drive/folders/1WaCH1Fa4zYt1rMyh223pfmOxmfeKUF8K";
+
 const sermons = [
-  "Wonders of Sowing into Kingdom Advancement Endeavours",
-  "Building Faith for Triumph in Hard Times",
+  { title: "Wonders of Sowing into Kingdom Advancement Endeavours", href: "https://drive.google.com/file/d/1WlpeNHHjbj37OVms9cIxJB4xSl0zxHgE/view?usp=sharing" },
+  { title: "Building Faith for Triumph in Hard Times", href: "https://drive.google.com/file/d/1WmOiqv_UGqnqZ1vBah4f9bv_d6OrdTgz/view?usp=sharing" },
 ];
 
 const galleryLabels = [
@@ -249,15 +251,15 @@ export default function Home() {
           <div className="container">
             <div className="sermons-topline">
               <SectionIntro eyebrow="Hear the word" title="Recent Messages"><p>Scripture-rooted teaching for faith, purpose and a life that bears fruit.</p></SectionIntro>
-              <div className="sermon-coming"><BookOpenText size={19} />Full sermon library coming soon.</div>
+              <div className="sermon-coming"><BookOpenText size={19} /><a href={sermonLibraryUrl} target="_blank" rel="noreferrer">Open full sermon library</a></div>
             </div>
             <div className="sermon-grid">
               {sermons.map((sermon, index) => (
-                <article key={sermon} className="sermon-card">
+                <article key={sermon.title} className="sermon-card">
                   <div className="sermon-card__number">0{index + 1}</div>
-                  <span className="status-pill">Coming soon</span>
-                  <h3>{sermon}</h3>
-                  <button onClick={() => scrollTo("contact")}>Ask about this message <ArrowUpRight size={17} /></button>
+                  <span className="status-pill">Listen now</span>
+                  <h3>{sermon.title}</h3>
+                  <a href={sermon.href} target="_blank" rel="noreferrer">Listen to this message <ArrowUpRight size={17} /></a>
                 </article>
               ))}
             </div>
