@@ -12,6 +12,8 @@ import { Link } from "wouter";
 const founder = "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/pastor-solomon-ufuoma.jpg";
 const gallery = "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/mandate-outreach-placeholder.jpg";
 const marketEvangelismPhoto = "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/market-evangelism-2026.jpg";
+const widowsCarePhoto = "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/widows-care-2026.jpg";
+const orphanageVisitsPhoto = "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/orphanage-visits-2026.jpg";
 const mark = "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/mandate-mission-mark.png";
 
 const focusAreas = [
@@ -26,7 +28,12 @@ const arms = [
 ];
 
 const messages = ["Wonders of Sowing into Kingdom Advancement Endeavours", "Building Faith for Triumph in Hard Times"];
-const archive = ["Market Evangelism", "Prison Visits", "Orphanage Visits", "Widows Care", "School Outreach", "Crusades"];
+const archive = [
+  { label: "Market Evangelism", src: marketEvangelismPhoto },
+  { label: "Widows Care", src: widowsCarePhoto },
+  { label: "Orphanage Visits", src: orphanageVisitsPhoto },
+];
+// To re-add: Prison Visits, School Outreach, Crusades — append { label, src } here when photos are ready.
 
 function PageCta({ href, children, outline = false }: { href: string; children: React.ReactNode; outline?: boolean }) {
   return <Link className={`button ${outline ? "button--ghost" : "button--gold"}`} href={href}>{children}<ArrowRight size={17} /></Link>;
@@ -53,7 +60,7 @@ export function EventsPage() {
 }
 
 export function GalleryPage() {
-  return <MinistryLayout><PageHero eyebrow="Outreach gallery" title={<>A growing record of <em>service.</em></>} lead="Photographs and videos from verified ministry outreaches will be kept here as the work continues."><PageCta href="/outreaches">See the outreach work</PageCta></PageHero><section className="route-section"><div className="container"><div className="route-archive-intro"><SectionHeading eyebrow="The archive" title="Photos will be added as each outreach is documented." /><span>Verified ministry images only</span></div><div className="route-gallery-grid">{archive.map((item, index) => <article key={item}><div>{index === 0 ? <img src={marketEvangelismPhoto} alt="The Great Mandate Market Evangelism outreach" /> : index === 1 ? <img src={gallery} alt="Illustrative placeholder for future ministry outreach photography" /> : <span>TGMO</span>}</div><p>{index === 0 ? "Authentic outreach photograph" : "Outreach photograph awaiting upload"}</p><h3>{item}</h3></article>)}</div></div></section><section className="route-section route-section--blue"><div className="container route-two-column"><div><SectionHeading eyebrow="Share media" title="Do you have an approved photograph from an outreach?" /><p>Send it to the ministry team for review before it is added to this archive.</p></div><PageCta href="/contact">Contact the team</PageCta></div></section></MinistryLayout>;
+  return <MinistryLayout><PageHero eyebrow="Outreach gallery" title={<>A growing record of <em>service.</em></>} lead="Photographs and videos from verified ministry outreaches will be kept here as the work continues."><PageCta href="/outreaches">See the outreach work</PageCta></PageHero><section className="route-section"><div className="container"><div className="route-archive-intro"><SectionHeading eyebrow="The archive" title="Photos will be added as each outreach is documented." /><span>Verified ministry images only</span></div><div className="route-gallery-grid">{archive.map((item) => <article key={item.label}><div><img src={item.src} alt={`The Great Mandate ${item.label} outreach`} /></div><p>Authentic outreach photograph</p><h3>{item.label}</h3></article>)}</div></div></section><section className="route-section route-section--blue"><div className="container route-two-column"><div><SectionHeading eyebrow="Share media" title="Do you have an approved photograph from an outreach?" /><p>Send it to the ministry team for review before it is added to this archive.</p></div><PageCta href="/contact">Contact the team</PageCta></div></section></MinistryLayout>;
 }
 
 export function PrayerPage() {

@@ -36,6 +36,8 @@ const assets = {
   texture: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/mandate-scripture-texture.jpg",
   gallery: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/mandate-outreach-placeholder.jpg",
   marketEvangelism: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/market-evangelism-2026.jpg",
+  widowsCare: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/widows-care-2026.jpg",
+  orphanageVisits: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/orphanage-visits-2026.jpg",
   mark: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/mandate-mission-mark.png",
 };
 
@@ -65,8 +67,11 @@ const sermons = [
 ];
 
 const galleryLabels = [
-  "Market Evangelism", "Prison Visits", "Orphanage Visits", "Widows Care", "School Outreach", "Crusades",
+  { label: "Market Evangelism", src: assets.marketEvangelism },
+  { label: "Widows Care", src: assets.widowsCare },
+  { label: "Orphanage Visits", src: assets.orphanageVisits },
 ];
+// To re-add: Prison Visits, School Outreach, Crusades — append { label, src } here when photos are ready.
 
 const ministryArms = [
   { title: "Compassion Outreach", description: "Practical care for widows, orphanages and people in need." },
@@ -307,7 +312,7 @@ export default function Home() {
           <div className="container">
             <div className="gallery-header"><SectionIntro eyebrow="Outreach gallery" title="The work will speak for itself."><p>Actual outreach photographs will be added here as the ministry’s story continues to unfold.</p></SectionIntro><p className="gallery-header__note">Future photo archive</p></div>
             <div className="gallery-grid">
-              {galleryLabels.map((label, index) => <article className={`gallery-tile gallery-tile--${index + 1}`} key={label}><div className={`gallery-art gallery-art--${index + 1}`}>{index === 0 ? <img src={assets.marketEvangelism} alt="The Great Mandate Market Evangelism outreach" /> : null}<span className="gallery-art__seal">TGMO · Archive</span></div><div><span>{index === 0 ? "Authentic outreach photograph" : "Outreach photograph awaiting upload"}</span><strong>{label}</strong></div></article>)}
+              {galleryLabels.map((item, index) => <article className={`gallery-tile gallery-tile--${index + 1}`} key={item.label}><div className={`gallery-art gallery-art--${index + 1}`}><img src={item.src} alt={`The Great Mandate ${item.label} outreach`} /><span className="gallery-art__seal">TGMO · Archive</span></div><div><span>Authentic outreach photograph</span><strong>{item.label}</strong></div></article>)}
             </div>
           </div>
         </section>
