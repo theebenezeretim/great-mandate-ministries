@@ -38,7 +38,6 @@ const assets = {
   marketEvangelism: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/market-evangelism-2026.jpg",
   widowsCare: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/widows-care-2026.jpg",
   orphanageVisits: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/orphanage-visits-2026.jpg",
-  mark: "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/mandate-mission-mark.png",
 };
 
 const navItems = [
@@ -242,7 +241,7 @@ export default function Home() {
               <p className="founder-meta">Born 31 May 1984 · Agparho, Odele North LGA, Delta State</p>
               <p>A man of deep faith, Pastor Solomon believes strongly in Jesus Christ, in the power of faith, and in the prosperity God has ordained for His people. He left a comfortable place of service to answer an uncompromising call to ministry.</p>
               <p>He is married to Amaka Regina Etaedafe. Together, they carry a burden to serve faithfully and make Christ known through practical love.</p>
-              <div className="founder-signoff"><img src={assets.mark} alt="" /><span>Founder &amp; Vision Bearer</span></div>
+              <div className="founder-signoff"><span>Founder &amp; Vision Bearer</span></div>
             </article>
           </div>
         </section>
