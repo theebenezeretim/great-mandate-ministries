@@ -36,9 +36,10 @@ const archive = [
   { label: "Widows Care", src: widowsCarePhoto },
   { label: "Orphanage Visits", src: orphanageVisitsPhoto },
 ];
+const galleryPhotoBase = "https://raw.githubusercontent.com/theebenezeretim/great-mandate-ministries/main/public/images/gallery";
 const galleryPhotos = Array.from(
   { length: 15 },
-  (_, index) => `/images/gallery/outreach-${String(index + 1).padStart(2, "0")}.jpg`,
+  (_, index) => `${galleryPhotoBase}/outreach-${String(index + 1).padStart(2, "0")}.jpg`,
 );
 // To re-add: Prison Visits, School Outreach, Crusades — append { label, src } here when photos are ready.
 
