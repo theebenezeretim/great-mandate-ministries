@@ -238,7 +238,7 @@ export default function Home() {
             <article className="founder-copy">
               <p className="eyebrow eyebrow--gold"><span />Meet the founder</p>
               <h2>Pastor Solomon Ufuoma</h2>
-              <p className="founder-meta">Born 31 May 1984 · Agparho, Odele North LGA, Delta State</p>
+              <p className="founder-meta">Born 31 May 1984 · Agbarho, Ughelli North LGA, Delta State</p>
               <p>A man of deep faith, Pastor Solomon believes strongly in Jesus Christ, in the power of faith, and in the prosperity God has ordained for His people. He left a comfortable place of service to answer an uncompromising call to ministry.</p>
               <p>He is married to Amaka Regina Etaedafe. Together, they carry a burden to serve faithfully and make Christ known through practical love.</p>
               <div className="founder-signoff"><span>Founder &amp; Vision Bearer</span></div>
