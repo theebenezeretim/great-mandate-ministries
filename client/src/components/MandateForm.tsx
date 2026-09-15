@@ -13,9 +13,13 @@ type MandateFormProps = {
   compact?: boolean;
 };
 
-// Replace this with the ministry's Formspree endpoint once it is created.
-// Example: "https://formspree.io/f/yourFormId"
-const FORMSPREE_ENDPOINT = "";
+const FORMSPREE_ENDPOINTS: Record<string, string> = {
+  "Partner with us": "https://formspree.io/f/mzeblejj",
+  "Prayer Request": "https://formspree.io/f/myeyqend",
+  "Event Waitlist": "https://formspree.io/f/mvkojkwj",
+  Contact: "https://formspree.io/f/xqpkvpgb",
+  Testimony: "https://formspree.io/f/mwlkdlaj",
+};
 
 export function MandateForm({
   formName,
@@ -30,15 +34,16 @@ export function MandateForm({
     const form = event.currentTarget;
     const data = new FormData(form);
     data.append("form_name", formName);
+    const endpoint = FORMSPREE_ENDPOINTS[formName];
 
-    if (!FORMSPREE_ENDPOINT) {
+    if (!endpoint) {
       setStatus("preview");
       return;
     }
 
     setStatus("sending");
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch(endpoint, {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },
@@ -70,7 +75,7 @@ export function MandateForm({
   }
 
   return (
-    <form className={`mandate-form ${compact ? "mandate-form--compact" : ""}`} onSubmit={handleSubmit} noValidate>
+    <form className={`mandate-form ${compact ? "mandate-form--compact" : ""}`} onSubmit={handleSubmit}>
       {children}
       <button className="button button--burgundy form-submit" type="submit" disabled={status === "sending"}>
         {status === "sending" ? <Loader2 size={16} className="animate-spin" /> : null}
